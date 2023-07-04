@@ -11,21 +11,21 @@ var SpecialSet = ['!', '?', '$', '#', '&', '*', '@', '#']
 
 function generatePassword() {
   //setting up alert boxes asking about password specifications
-  var uppercase = confirm("Would you like uppercase letters in your password \n Select 'cancel' for no");
-  var lowercase = confirm("Would you like lowercase letters in your password \n Select 'cancel' for no");//true or false
-  var numbers = confirm("Would you like numbers in your password \n Select 'cancel' for no");//true or false
-  var specialcharacters = confirm("Would you like special characters in your password \n Select 'cancel' for no");//true or false
-  var passwordlength = prompt("How long would you like your password to be? \n Enter a value between 8 and 128.");
+  var uppercase = confirm("Would you like uppercase letters in your password? \n \n   Select 'cancel' for no");
+  var lowercase = confirm("Would you like lowercase letters in your password? \n \n   Select 'cancel' for no");//true or false
+  var numbers = confirm("Would you like numbers in your password? \n \n   Select 'cancel' for no");//true or false
+  var specialcharacters = confirm("Would you like special characters in your password? \n \n   Select 'cancel' for no");//true or false
+  var passwordlength = prompt("How long would you like your password to be? \n \n   Enter a value between 8 and 128.");
 
 //setting up warning messages for incorrect password lengths.  NOTE: seems to be impossible to actually limit character input into prompt boxes, so set up warnings with the option for one-time correction.  
   if (passwordlength > 128) {
-  passwordlength = prompt("Your number was too large, please enter a value between 8 to 128.")
+  passwordlength = prompt("ERROR - Your number was too large, please enter a value between 8 to 128.")
 }
 else if(passwordlength < 8) {
-  passwordlength = prompt("Your number was too small, please enter a value between 8 to 128.")
+  passwordlength = prompt("ERROR - Your number was too small, please enter a value between 8 to 128.")
 }
 else if(isNaN(passwordlength)) {
-  passwordlength = prompt("You must enter a number, please enter a value between 8 to 128.")
+  passwordlength = prompt("ERROR - You must enter a number, please enter a value between 8 to 128.")
 }
 
 //console tests for code function (could remove but I used these when building)
