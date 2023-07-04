@@ -62,12 +62,11 @@ else if(isNaN(passwordlength)) {
     console.log(password)
   }
 
-  //generate return. Will generate error message for incorrect entry of passwordlength
-if (passwordlength > 7 && passwordlength < 129) return password
-else return password="ERROR ENTERING PASSWORD LENGTH"
+  //generate return. Will generate error message for incorrect entry of passwordlength or allCharacters is empty.
+if (passwordlength > 7 && passwordlength < 129 && allCharacters.length > 0) return password
+else if (allCharacters.length < 2) return password="ERROR - YOU MUST SELECT AT LEAST ONE CHARACTER TYPE."
+else return password="ERROR ENTERING PASSWORD LENGTH."
   }
-
-
 
 
 // Write password to the #password input
