@@ -11,10 +11,10 @@ var SpecialSet = ['!', '?', '$', '#', '&', '*', '@', '#']
 
 function generatePassword() {
   //setting up alert boxes asking about password specifications
-  var uppercase = confirm("Would you like uppercase letters in your password? \n \n   Select 'cancel' for no");
-  var lowercase = confirm("Would you like lowercase letters in your password? \n \n   Select 'cancel' for no");//true or false
-  var numbers = confirm("Would you like numbers in your password? \n \n   Select 'cancel' for no");//true or false
-  var specialcharacters = confirm("Would you like special characters in your password? \n \n   Select 'cancel' for no");//true or false
+  var uppercase = confirm("Would you like uppercase letters in your password? \n \n   Select 'cancel' for no.");
+  var lowercase = confirm("Would you like lowercase letters in your password? \n \n   Select 'cancel' for no.");//true or false
+  var numbers = confirm("Would you like numbers in your password? \n \n   Select 'cancel' for no.");//true or false
+  var specialcharacters = confirm("Would you like special characters in your password? \n \n   Select 'cancel' for no.");//true or false
   var passwordlength = prompt("How long would you like your password to be? \n \n   Enter a value between 8 and 128.");
 
 //setting up warning messages for incorrect password lengths.  NOTE: seems to be impossible to actually limit character input into prompt boxes, so set up warnings with the option for one-time correction.  
@@ -63,7 +63,7 @@ else if(isNaN(passwordlength)) {
   }
 
   //generate return. Will generate error message for incorrect entry of passwordlength
-if (passwordlength > 8 && passwordlength < 128) return password
+if (passwordlength > 7 && passwordlength < 129) return password
 else return password="ERROR ENTERING PASSWORD LENGTH"
   }
 
